@@ -1,29 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import { StyleSheet, View, Text, Button } from "react-native";
 
 const HomeScreen = ({ navigation }) => {
-  const [count, setCount] = useState(0);
-
-  function increment() {
-    setCount(count + 1);
-  }
-
-  function decrement() {
-    setCount(count - 1);
-  }
-
-  function reset() {
-    setCount(0);
-  }
   console.log("Navigation: ", navigation);
   return (
-    <View>
-      <Text>Your Count:</Text>
-      <Text>{count}</Text>
-      <Button title="UP" onPress={increment} />
-      <Button title="DOWN" onPress={decrement} />
-      <Button title="RESET" onPress={reset} />
-      {/* <Button title="TODO" onPress={navigation.navigate} /> */}
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <Text>Welcome to Pachamami</Text>
+      <Button
+        title="About"
+        onPress={() => navigation.navigate("About")}></Button>
+      <Button title="Shop" onPress={() => navigation.navigate("Shop")}></Button>
+      <Button
+        title="Contact Us"
+        onPress={() => navigation.navigate("Contact")}></Button>
     </View>
   );
 };
