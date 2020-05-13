@@ -7,12 +7,11 @@ const HomeScreen = ({ navigation }) => {
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <Text>Welcome to Pachamami</Text>
       <Button
-        title="About"
-        onPress={() => navigation.navigate("About")}></Button>
-      <Button title="Shop" onPress={() => navigation.navigate("Shop")}></Button>
+        title="Product"
+        onPress={() => navigation.navigate("Product")}></Button>
       <Button
-        title="Contact Us"
-        onPress={() => navigation.navigate("Contact")}></Button>
+        title="Shop Categories"
+        onPress={() => navigation.navigate("Category")}></Button>
     </View>
   );
 };

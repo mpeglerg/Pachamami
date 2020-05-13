@@ -1,44 +1,56 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
+import { createBottomTabNavigator } from "react-navigation-tabs";
 import HomeScreen from "./src/screens/HomeScreen";
+import ShopScreen from "./src/screens/ShopScreen";
 import AboutScreen from "./src/screens/AboutScreen";
 import ContactUsScreen from "./src/screens/ContactUsScreen";
-import ShopScreen from "./src/screens/ShopScreen";
+import WishlistScreen from "./src/screens/WishlistScreen";
+import CategoryScreen from "./src/screens/CategoryScreen";
+import ProductScreen from "./src/screens/ProductScreen";
 
-const navigator = createStackNavigator(
-  {
-    Home: HomeScreen,
-    About: {
-      screen: AboutScreen,
-      navigationOptions: { title: "About Pachamami" },
-    },
-    Shop: {
-      screen: ShopScreen,
-      navigationOptions: { title: "Shop" },
-    },
-    Contact: {
-      screen: ContactUsScreen,
-      navigationOptions: { title: "Contact Us" },
-    },
-  },
-  {
-    //What people see when they open the app
-    initialRouteName: "Home",
-    defaultNavigationOptions: {
-      title: "Pachamami Home",
-    },
-  }
-);
-
-export default createAppContainer(navigator);
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+const HomeStack = createStackNavigator({
+  Home: { screen: HomeScreen },
+  Product: { screen: ProductScreen },
+  Category: { screen: CategoryScreen },
 });
+
+const CategoryStack = createStackNavigator({
+  Category: CategoryScreen,
+  Shop: ShopScreen,
+});
+
+export default createAppContainer(
+  createBottomTabNavigator(
+    {
+      Home: { screen: HomeStack },
+      About: AboutScreen,
+      Shop: CategoryStack,
+      Wishlist: WishlistScreen,
+      Contact: ContactUsScreen,
+    },
+    {
+      defaultNavigationOptions: ({ navigation }) => ({
+        tabBarIcon: ({ focused, tintColor }) => {
+          const { routeName } = navigation.state;
+          let iconName;
+          if (routeName === "About") {
+            iconName = `ios-information-circle${focused ? "" : "-outline"}`;
+          } else if (routeName === "Contact") {
+            iconName = `ios-options${focused ? "" : "-outline"}`;
+          }
+
+          // You can return any component that you like here! We usually use an
+          // icon component from react-native-vector-icons
+          return <Ionicons name={iconName} size={25} color={tintColor} />;
+        },
+      }),
+      tabBarOptions: {
+        activeTintColor: "magenta",
+        inactiveTintColor: "gray",
+      },
+    }
+  )
+);
