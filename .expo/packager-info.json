@@ -2,9 +2,9 @@
   "expoServerPort": 19000,
   "expoServerNgrokUrl": "https://xc-ib3.anonymous.pachamami.exp.direct",
   "packagerNgrokUrl": "https://packager.xc-ib3.anonymous.pachamami.exp.direct",
-  "ngrokPid": 90758,
+  "ngrokPid": 91740,
   "packagerPort": 19003,
-  "packagerPid": 90748,
+  "packagerPid": 91730,
   "webpackServerPort": null,
   "devToolsPort": 19002
 }

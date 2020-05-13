@@ -26,10 +26,10 @@ export default createAppContainer(
   createBottomTabNavigator(
     {
       Home: { screen: HomeStack },
-      About: AboutScreen,
-      Shop: CategoryStack,
-      Wishlist: WishlistScreen,
-      Contact: ContactUsScreen,
+      About: { screen: AboutScreen },
+      Shop: { screen: CategoryStack },
+      Wishlist: { screen: WishlistScreen },
+      Contact: { screen: ContactUsScreen },
     },
     {
       defaultNavigationOptions: ({ navigation }) => ({
