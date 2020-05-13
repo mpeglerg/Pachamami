@@ -37,6 +37,7 @@ const ProductGrid = ({ navigation }) => {
           onPress={() =>
             navigation.navigate("Product", {
               productName: item.productName,
+              productColor: item.code,
             })
           }>
           <View style={[styles.itemContainer, { backgroundColor: item.code }]}>
