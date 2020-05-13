@@ -6,7 +6,11 @@ const ProductScreen = ({ navigation }) => {
     <View
       title
       style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Product Screen</Text>
+      <Text>
+        {JSON.stringify(
+          navigation.getParam("productName", "Error getting product name")
+        )}
+      </Text>
     </View>
   );
 };
