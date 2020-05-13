@@ -6,6 +6,7 @@ import ProductGrid from "./components/ProductGrid";
 import HomePageCarousel1 from "/Users/mayapeglergordon/Pachamami/Pachamami/src/images/HomePageCarousel1.jpeg";
 import HomePageCarousel2 from "/Users/mayapeglergordon/Pachamami/Pachamami/src/images/HomePageCarousel2.jpeg";
 import { ScrollView } from "react-native-gesture-handler";
+import CategoryHomeScreen from "./components/CategoryHomeScreen";
 const HomeScreen = ({ navigation }) => {
   console.log("Navigation: ", navigation);
   return (
@@ -31,9 +32,12 @@ const HomeScreen = ({ navigation }) => {
             style={{ width: 380, height: 250 }}></Image>
         </View>
       </Carousel>
+      <CategoryHomeScreen navigation={navigation} />
       <Button
         title="Shop Categories"
-        onPress={() => navigation.navigate("Category")}></Button>
+        onPress={() => navigation.navigate("Category")}
+      />
+      <Text>Shop Our Feed</Text>
       <ProductGrid navigation={navigation} />
     </ScrollView>
   );

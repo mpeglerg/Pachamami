@@ -6,10 +6,11 @@ const CategoryScreen = ({ navigation }) => {
     <View
       title
       style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Category Screen</Text>
-      <Button
-        title="Shop Category"
-        onPress={() => navigation.navigate("Shop")}></Button>
+      <Text>
+        {JSON.stringify(
+          navigation.getParam("categoryName", "Shop All Products")
+        )}
+      </Text>
     </View>
   );
 };
