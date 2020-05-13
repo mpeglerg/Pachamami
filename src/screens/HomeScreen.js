@@ -1,7 +1,9 @@
 import React from "react";
-import { StyleSheet, View, Text, Button } from "react-native";
+import { StyleSheet, View, Text, Button, Image } from "react-native";
 import Carousel from "react-native-carousel-view";
-
+//import url causing issues with ./src/etc... In process of debugging
+import HomePageCarousel1 from "/Users/mayapeglergordon/Pachamami/Pachamami/src/images/HomePageCarousel1.jpeg";
+import HomePageCarousel2 from "/Users/mayapeglergordon/Pachamami/Pachamami/src/images/HomePageCarousel2.jpeg";
 const HomeScreen = ({ navigation }) => {
   console.log("Navigation: ", navigation);
   return (
@@ -16,9 +18,15 @@ const HomeScreen = ({ navigation }) => {
         indicatorText="✽"
         indicatorColor="red">
         <View style={styles.contentContainer}>
+          <Image
+            source={HomePageCarousel1}
+            style={{ width: 380, height: 250 }}></Image>
           <Text>Page 1</Text>
         </View>
         <View style={styles.contentContainer}>
+          <Image
+            source={HomePageCarousel2}
+            style={{ width: 380, height: 250 }}></Image>
           <Text>Page 2</Text>
         </View>
         <View style={styles.contentContainer}>
