@@ -33,10 +33,6 @@ const HomeScreen = ({ navigation }) => {
         </View>
       </Carousel>
       <CategoryHomeScreen navigation={navigation} />
-      <Button
-        title="Shop Categories"
-        onPress={() => navigation.navigate("Category")}
-      />
       <Text>Shop Our Feed</Text>
       <ProductGrid navigation={navigation} />
     </ScrollView>

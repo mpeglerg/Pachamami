@@ -20,7 +20,7 @@ const CategoryHomeScreen = ({ navigation }) => {
       renderItem={({ item, index }) => (
         <TouchableHighlight
           onPress={() =>
-            navigation.navigate("Category", {
+            navigation.navigate("Shop", {
               categoryName: item.categoryName,
             })
           }>

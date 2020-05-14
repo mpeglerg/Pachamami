@@ -8,18 +8,19 @@ import ShopScreen from "./src/screens/ShopScreen";
 import AboutScreen from "./src/screens/AboutScreen";
 import ContactUsScreen from "./src/screens/ContactUsScreen";
 import WishlistScreen from "./src/screens/WishlistScreen";
-import CategoryScreen from "./src/screens/CategoryScreen";
+import ShopCategoryScreen from "./src/screens/ShopCategoryScreen";
 import ProductScreen from "./src/screens/ProductScreen";
 
 const HomeStack = createStackNavigator({
   Home: { screen: HomeScreen },
   Product: { screen: ProductScreen },
-  Category: { screen: CategoryScreen },
+  Shop: { screen: ShopCategoryScreen },
 });
 
 const CategoryStack = createStackNavigator({
-  Category: CategoryScreen,
-  Shop: ShopScreen,
+  "Shop All": ShopScreen,
+  Shop: { screen: ShopCategoryScreen },
+  Product: { screen: ProductScreen },
 });
 
 export default createAppContainer(
@@ -41,9 +42,6 @@ export default createAppContainer(
           } else if (routeName === "Contact") {
             iconName = `ios-options${focused ? "" : "-outline"}`;
           }
-
-          // You can return any component that you like here! We usually use an
-          // icon component from react-native-vector-icons
           return <Ionicons name={iconName} size={25} color={tintColor} />;
         },
       }),

@@ -1,12 +1,13 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
+import CategoryHomeScreen from "./components/CategoryHomeScreen";
 
 const ShopScreen = ({ navigation }) => {
   return (
     <View
       title
       style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Shop Screen</Text>
+      <CategoryHomeScreen navigation={navigation} />
     </View>
   );
 };
