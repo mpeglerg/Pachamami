@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Text, View, Button, StyleSheet } from "react-native";
 
 const WishListItem = ({ navigation }) => {
