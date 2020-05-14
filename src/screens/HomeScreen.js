@@ -3,8 +3,8 @@ import { StyleSheet, View, Text, Button, Image } from "react-native";
 import Carousel from "react-native-carousel-view";
 //import url causing issues with ./src/etc... In process of debugging
 import ProductGrid from "./components/ProductGrid";
-import HomePageCarousel1 from "/Users/mayapeglergordon/Pachamami/Pachamami/src/images/HomePageCarousel1.jpeg";
-import HomePageCarousel2 from "/Users/mayapeglergordon/Pachamami/Pachamami/src/images/HomePageCarousel2.jpeg";
+import HomePageCarousel1 from "./images/HomePageCarousel1.jpeg";
+import HomePageCarousel2 from "./images/HomePageCarousel2.jpeg";
 import { ScrollView } from "react-native-gesture-handler";
 import CategoryHomeScreen from "./components/CategoryHomeScreen";
 const HomeScreen = ({ navigation }) => {
