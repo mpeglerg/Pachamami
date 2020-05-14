@@ -29,14 +29,22 @@ const WishlistStack = createStackNavigator({
   "My Cart": { screen: MyCartScreen },
 });
 
+const AboutStack = createStackNavigator({
+  About: AboutScreen,
+});
+
+const ContactUsStack = createStackNavigator({
+  "Contact Us": ContactUsScreen,
+});
+
 export default createAppContainer(
   createBottomTabNavigator(
     {
       Home: { screen: HomeStack },
-      About: { screen: AboutScreen },
+      About: { screen: AboutStack },
       Shop: { screen: CategoryStack },
       Wishlist: { screen: WishlistStack },
-      Contact: { screen: ContactUsScreen },
+      Contact: { screen: ContactUsStack },
     },
     {
       defaultNavigationOptions: ({ navigation }) => ({
