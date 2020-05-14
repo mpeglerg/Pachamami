@@ -6,7 +6,7 @@ const ContactUsScreen = ({ navigation }) => {
     <View
       title
       style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Contact Us Screen</Text>
+      <Text>Connect with Us</Text>
     </View>
   );
 };

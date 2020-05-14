@@ -1,7 +1,6 @@
 import React from "react";
 import { StyleSheet, View, Text, Button, Image } from "react-native";
 import Carousel from "react-native-carousel-view";
-//import url causing issues with ./src/etc... In process of debugging
 import ProductGrid from "./components/ProductGrid";
 import HomePageCarousel1 from "./images/HomePageCarousel1.jpeg";
 import HomePageCarousel2 from "./images/HomePageCarousel2.jpeg";
