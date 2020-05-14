@@ -10,6 +10,7 @@ import ContactUsScreen from "./src/screens/ContactUsScreen";
 import WishlistScreen from "./src/screens/WishlistScreen";
 import ShopCategoryScreen from "./src/screens/ShopCategoryScreen";
 import ProductScreen from "./src/screens/ProductScreen";
+import MyCartScreen from "./src/screens/MyCartScreen";
 
 const HomeStack = createStackNavigator({
   Home: { screen: HomeScreen },
@@ -25,7 +26,7 @@ const CategoryStack = createStackNavigator({
 
 const WishlistStack = createStackNavigator({
   "My Wishlist": { screen: WishlistScreen },
-  Shop: { screen: ShopCategoryScreen },
+  "My Cart": { screen: MyCartScreen },
 });
 
 export default createAppContainer(

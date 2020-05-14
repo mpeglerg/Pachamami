@@ -2,17 +2,6 @@ import React, { useState } from "react";
 import { Text, View, Button, StyleSheet } from "react-native";
 
 const WishListItem = ({ navigation }) => {
-  const [itemQuantity, setItemQuantity] = useState(1);
-  function incrementQuantity() {
-    setItemQuantity(itemQuantity + 1);
-  }
-  function decrementQuantity() {
-    if (itemQuantity == 0) {
-      setItemQuantity(itemQuantity);
-    } else {
-      setItemQuantity(itemQuantity - 1);
-    }
-  }
   return (
     <View>
       <View
@@ -25,10 +14,10 @@ const WishListItem = ({ navigation }) => {
         ]}></View>
       <Text>Product Name</Text>
       <Text>$0.00</Text>
-      <Text>{itemQuantity}</Text>
-      <Button title="Add to Cart"></Button>
-      {/* <Button title="+" onPress={incrementQuantity}></Button>
-      <Button title="-" onPress={decrementQuantity}></Button> */}
+      <Button
+        title="Add to Cart"
+        onPress={() => navigation.navigate("My Cart")}></Button>
+      <Button title="Remove from Wishlist"></Button>
     </View>
   );
 };
