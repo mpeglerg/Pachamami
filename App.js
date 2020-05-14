@@ -23,13 +23,18 @@ const CategoryStack = createStackNavigator({
   Product: { screen: ProductScreen },
 });
 
+const WishlistStack = createStackNavigator({
+  "My Wishlist": { screen: WishlistScreen },
+  Shop: { screen: ShopCategoryScreen },
+});
+
 export default createAppContainer(
   createBottomTabNavigator(
     {
       Home: { screen: HomeStack },
       About: { screen: AboutScreen },
       Shop: { screen: CategoryStack },
-      Wishlist: { screen: WishlistScreen },
+      Wishlist: { screen: WishlistStack },
       Contact: { screen: ContactUsScreen },
     },
     {
