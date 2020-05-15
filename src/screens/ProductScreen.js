@@ -1,8 +1,10 @@
 import React from "react";
-import { Text, View, StyleSheet, Button } from "react-native";
+import { Text, View, StyleSheet, Button, Animated } from "react-native";
 import ProductCarousel from "./components/ProductCarousel";
 import { TouchableHighlight } from "react-native-gesture-handler";
 import { FontAwesome } from "@expo/vector-icons";
+
+import SlidingUpPanel from "rn-sliding-up-panel";
 
 const ProductScreen = ({ navigation }) => {
   return (
@@ -23,10 +25,21 @@ const ProductScreen = ({ navigation }) => {
         <TouchableHighlight style={styles.cart}>
           <Button title="Add to Cart"></Button>
         </TouchableHighlight>
-        <TouchableHighlight style={styles.descrip}>
+        <TouchableHighlight
+          style={styles.descrip}
+          // onPress={() => this._panel.show()}
+        >
           <Button title="Product Description"></Button>
         </TouchableHighlight>
       </View>
+
+      {/* <Button title="Show panel" onPress={() => this._panel.show()} />
+      <SlidingUpPanel ref={(c) => (this._panel = c)}>
+        <View style={styles.container}>
+          <Text>Here is the content inside panel</Text>
+          <Button title="Hide" onPress={() => this._panel.hide()} />
+        </View>
+      </SlidingUpPanel> */}
     </View>
   );
 };
@@ -61,7 +74,7 @@ const styles = StyleSheet.create({
   },
   itemInteractions: {
     textAlign: "center",
-    marginTop: "110%",
+    marginTop: "105%",
     padding: "10%",
     height: "100%",
   },
@@ -82,6 +95,12 @@ const styles = StyleSheet.create({
     top: 430,
     flexDirection: "row",
     justifyContent: "space-around",
+  },
+  container: {
+    flex: 1,
+    backgroundColor: "white",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
 

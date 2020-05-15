@@ -6,10 +6,24 @@ import HomePageCarousel1 from "./images/HomePageCarousel1.jpeg";
 import HomePageCarousel2 from "./images/HomePageCarousel2.jpeg";
 import { ScrollView } from "react-native-gesture-handler";
 import CategoryHomeScreen from "./components/CategoryHomeScreen";
+
+import { SearchBar } from "react-native-elements";
+
 const HomeScreen = ({ navigation }) => {
   console.log("Navigation: ", navigation);
   return (
     <ScrollView style={{ flex: 1 }}>
+      <SearchBar
+        round
+        searchIcon={{ size: 20 }}
+        // onChangeText={text => this.SearchFilterFunction(text)}
+        // onClear={text => this.SearchFilterFunction('')}
+        placeholder="Type Here..."
+        // value={this.state.search}
+        platform="ios"
+        // platform="default"
+        // lightTheme
+      />
       <Carousel
         width={375}
         height={250}
@@ -23,12 +37,14 @@ const HomeScreen = ({ navigation }) => {
         <View style={styles.contentContainer}>
           <Image
             source={HomePageCarousel1}
-            style={{ width: 380, height: 250 }}></Image>
+            style={{ width: 380, height: 250 }}
+          ></Image>
         </View>
         <View style={styles.contentContainer}>
           <Image
             source={HomePageCarousel2}
-            style={{ width: 380, height: 250 }}></Image>
+            style={{ width: 380, height: 250 }}
+          ></Image>
         </View>
       </Carousel>
       <CategoryHomeScreen navigation={navigation} />

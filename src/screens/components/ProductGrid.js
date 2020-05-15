@@ -39,7 +39,8 @@ const ProductGrid = ({ navigation }) => {
               productName: item.productName,
               productColor: item.code,
             })
-          }>
+          }
+        >
           <View style={[styles.itemContainer, { backgroundColor: item.code }]}>
             <Text style={styles.itemName}>{item.productName}</Text>
             <Text style={styles.itemCode}>{item.code}</Text>
