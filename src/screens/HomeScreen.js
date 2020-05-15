@@ -10,16 +10,7 @@ const HomeScreen = ({ navigation }) => {
   console.log("Navigation: ", navigation);
   return (
     <ScrollView style={{ flex: 1 }}>
-      <Carousel
-        width={375}
-        height={250}
-        delay={2000}
-        hideIndicators={true}
-        // indicatorAtBottom={true}
-        // indicatorSize={20}
-        // indicatorText="✽"
-        // indicatorColor="red"
-      >
+      <Carousel width={375} height={250} delay={2000} hideIndicators={true}>
         <View style={styles.contentContainer}>
           <Image
             source={HomePageCarousel1}

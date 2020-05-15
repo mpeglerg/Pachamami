@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, Button, StyleSheet } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
 import { FlatGrid } from "react-native-super-grid";
 import { TouchableHighlight } from "react-native-gesture-handler";
 
@@ -64,7 +64,6 @@ const styles = StyleSheet.create({
   gridView: {
     marginTop: 20,
     flex: 1,
-    // height: 50,
   },
   itemContainer: {
     justifyContent: "flex-end",
