@@ -6,8 +6,9 @@ const ProductCarousel = ({ navigation }) => {
   return (
     <View
       title
-      style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Carousel width={375} height={250} delay={2000} hideIndicators={true}>
+      style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
+    >
+      <Carousel width={375} height={450} delay={2000} hideIndicators={true}>
         <View
           title
           style={[
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
     borderRadius: 5,
     padding: 10,
-    height: 400,
+    // height: "70%",
   },
   itemName: {
     fontSize: 16,
