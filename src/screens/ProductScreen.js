@@ -3,12 +3,14 @@ import { Text, View, StyleSheet, Button, Animated } from "react-native";
 import ProductCarousel from "./components/ProductCarousel";
 import { TouchableHighlight } from "react-native-gesture-handler";
 import { FontAwesome } from "@expo/vector-icons";
+import { ScrollView } from "react-native-gesture-handler";
+import ProductDescriptionCard from "./components/ProductDescriptionCard";
 
 import SlidingUpPanel from "rn-sliding-up-panel";
 
 const ProductScreen = ({ navigation }) => {
   return (
-    <View>
+    <ScrollView>
       <ProductCarousel navigation={navigation} />
       <TouchableHighlight style={styles.wishlist}>
         <FontAwesome name="heart-o" size={20} color="black" />
@@ -40,7 +42,6 @@ const ProductScreen = ({ navigation }) => {
           <Button title="Hide" onPress={() => this._panel.hide()} />
         </View>
       </SlidingUpPanel> */}
-    </View>
   );
 };
 

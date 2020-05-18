@@ -6,8 +6,7 @@ const ProductCarousel = ({ navigation }) => {
   return (
     <View
       title
-      style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
-    >
+      style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <Carousel width={375} height={450} delay={2000} hideIndicators={true}>
         <View
           title

@@ -1,10 +1,10 @@
 {
   "expoServerPort": 19000,
-  "expoServerNgrokUrl": "https://sp-zvb.anonymous.pachamami.exp.direct",
-  "packagerNgrokUrl": "https://packager.sp-zvb.anonymous.pachamami.exp.direct",
-  "ngrokPid": 7969,
-  "packagerPort": 19001,
-  "packagerPid": 7948,
+  "expoServerNgrokUrl": "https://j5-22t.anonymous.pachamami.exp.direct",
+  "packagerNgrokUrl": "https://packager.j5-22t.anonymous.pachamami.exp.direct",
+  "ngrokPid": 7205,
+  "packagerPort": 19003,
+  "packagerPid": 7193,
   "webpackServerPort": null,
   "devToolsPort": 19002
 }
