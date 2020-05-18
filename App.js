@@ -11,7 +11,8 @@ import WishlistScreen from "./src/screens/WishlistScreen";
 import ShopCategoryScreen from "./src/screens/ShopCategoryScreen";
 import ProductScreen from "./src/screens/ProductScreen";
 import MyCartScreen from "./src/screens/MyCartScreen";
-
+import MuseScreen from "./src/screens/MuseScreen";
+import ModelSpotlightScreen from "./src/screens/ModelSpotlightScreen";
 const HomeStack = createStackNavigator({
   Home: { screen: HomeScreen },
   Product: { screen: ProductScreen },
@@ -37,11 +38,17 @@ const ContactUsStack = createStackNavigator({
   "Contact Us": ContactUsScreen,
 });
 
+const MuseStack = createStackNavigator({
+  "Our Muses": MuseScreen,
+  "Model Spotlight": ModelSpotlightScreen,
+});
+
 export default createAppContainer(
   createBottomTabNavigator(
     {
       Home: { screen: HomeStack },
       About: { screen: AboutStack },
+      Muse: { screen: MuseStack },
       Shop: { screen: CategoryStack },
       Wishlist: { screen: WishlistStack },
       Contact: { screen: ContactUsStack },
