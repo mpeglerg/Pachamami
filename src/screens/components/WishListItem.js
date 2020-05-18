@@ -11,12 +11,23 @@ const WishListItem = ({ navigation }) => {
           {
             backgroundColor: "#1abc9c",
           },
-        ]}></View>
+        ]}
+      ></View>
       <Text>Product Name</Text>
       <Text>$0.00</Text>
       <Button
         title="Add to Cart"
-        onPress={() => navigation.navigate("My Cart")}></Button>
+        onPress={() =>
+          navigation.navigate("My Cart", {
+            productName: "Product A",
+            productColor: "#1abc9c",
+            // productDescription: productDescription,
+            productPrice: "$75",
+            // productImages: item.productImages,
+            // productTags: item.productTags,
+          })
+        }
+      ></Button>
       <Button title="Remove from Wishlist"></Button>
     </View>
   );

@@ -1,10 +1,10 @@
 {
   "expoServerPort": 19000,
-  "expoServerNgrokUrl": "https://j5-22t.anonymous.pachamami.exp.direct",
-  "packagerNgrokUrl": "https://packager.j5-22t.anonymous.pachamami.exp.direct",
-  "ngrokPid": 7205,
+  "expoServerNgrokUrl": "https://iu-i67.anonymous.pachamami.exp.direct",
+  "packagerNgrokUrl": "https://packager.iu-i67.anonymous.pachamami.exp.direct",
+  "ngrokPid": 21252,
   "packagerPort": 19003,
-  "packagerPid": 7193,
+  "packagerPid": 21238,
   "webpackServerPort": null,
   "devToolsPort": 19002
 }

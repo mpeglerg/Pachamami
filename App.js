@@ -17,12 +17,14 @@ const HomeStack = createStackNavigator({
   Home: { screen: HomeScreen },
   Product: { screen: ProductScreen },
   Shop: { screen: ShopCategoryScreen },
+  "My Cart": { screen: MyCartScreen },
 });
 
 const CategoryStack = createStackNavigator({
   "Shop All": ShopScreen,
   Shop: { screen: ShopCategoryScreen },
   Product: { screen: ProductScreen },
+  "My Cart": { screen: MyCartScreen },
 });
 
 const WishlistStack = createStackNavigator({
@@ -32,10 +34,12 @@ const WishlistStack = createStackNavigator({
 
 const AboutStack = createStackNavigator({
   About: AboutScreen,
+  "My Cart": { screen: MyCartScreen },
 });
 
 const ContactUsStack = createStackNavigator({
   "Contact Us": ContactUsScreen,
+  "My Cart": { screen: MyCartScreen },
 });
 
 const MuseStack = createStackNavigator({
