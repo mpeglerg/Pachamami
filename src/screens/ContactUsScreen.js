@@ -30,7 +30,6 @@ const ContactUsScreen = ({ navigation }) => {
           alignItems: "center",
           justifyContent: "center",
         }}>
-        <Text>Connect with Us</Text>
         <FlatGrid
           itemDimension={90}
           items={items}

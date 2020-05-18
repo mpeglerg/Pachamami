@@ -3,10 +3,12 @@ import { Text, View, StyleSheet, Button } from "react-native";
 import ProductCarousel from "./components/ProductCarousel";
 import { TouchableHighlight } from "react-native-gesture-handler";
 import { FontAwesome } from "@expo/vector-icons";
+import { ScrollView } from "react-native-gesture-handler";
+import ProductDescriptionCard from "./components/ProductDescriptionCard";
 
 const ProductScreen = ({ navigation }) => {
   return (
-    <View>
+    <ScrollView>
       <ProductCarousel navigation={navigation} />
       <TouchableHighlight style={styles.wishlist}>
         <FontAwesome name="heart-o" size={20} color="black" />
@@ -27,7 +29,8 @@ const ProductScreen = ({ navigation }) => {
           <Button title="Product Description"></Button>
         </TouchableHighlight>
       </View>
-    </View>
+      <ProductDescriptionCard></ProductDescriptionCard>
+    </ScrollView>
   );
 };
 
@@ -82,6 +85,12 @@ const styles = StyleSheet.create({
     top: 430,
     flexDirection: "row",
     justifyContent: "space-around",
+  },
+  container: {
+    flex: 1,
+    backgroundColor: "white",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
 
