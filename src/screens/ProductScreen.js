@@ -9,6 +9,27 @@ import ProductDescriptionCard from "./components/ProductDescriptionCard";
 import SlidingUpPanel from "rn-sliding-up-panel";
 
 const ProductScreen = ({ navigation }) => {
+  // console.log("Navigation from product screen: ", navigation);
+  let productName = navigation.getParam(
+    "productName",
+    "Error getting product name"
+  );
+
+  let productPrice = navigation.getParam(
+    "productPrice",
+    "Error getting product price"
+  );
+
+  let productDescription = navigation.getParam(
+    "productDescription",
+    "Error getting product desc"
+  );
+
+  let productColor = navigation.getParam(
+    "productColor",
+    "Error getting product color"
+  );
+
   return (
     <ScrollView>
       <ProductCarousel navigation={navigation} />
@@ -16,16 +37,27 @@ const ProductScreen = ({ navigation }) => {
         <FontAwesome name="heart-o" size={20} color="black" />
       </TouchableHighlight>
       <View style={styles.chosenItem}>
+        <Text style={{ fontSize: "17px" }}>{JSON.stringify(productName)}</Text>
+        <Text style={{ fontSize: "17px" }}>{JSON.stringify(productPrice)}</Text>
         <Text style={{ fontSize: "17px" }}>
-          {JSON.stringify(
-            navigation.getParam("productName", "Error getting product name")
-          )}
+          {JSON.stringify(productDescription)}
         </Text>
-        <Text style={{ fontSize: "17px" }}>$0.00</Text>
       </View>
       <View style={styles.itemInteractions}>
         <TouchableHighlight style={styles.cart}>
-          <Button title="Add to Cart"></Button>
+          <Button
+            onPress={() =>
+              navigation.navigate("My Cart", {
+                productName: productName,
+                productColor: productColor,
+                productDescription: productDescription,
+                productPrice: item.productPrice,
+                // productImages: item.productImages,
+                // productTags: item.productTags,
+              })
+            }
+            title="Add to Cart"
+          ></Button>
         </TouchableHighlight>
         <TouchableHighlight
           style={styles.descrip}
@@ -64,11 +96,11 @@ const styles = StyleSheet.create({
     borderColor: "black",
     borderWidth: 2,
     marginRight: 25,
-    marginTop: 10,
+    // marginTop: 0,
   },
   itemInteractions: {
     textAlign: "center",
-    marginTop: "105%",
+    marginTop: "15%",
     padding: "10%",
     height: "100%",
   },
@@ -86,7 +118,7 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   chosenItem: {
-    top: 430,
+    top: 70,
     flexDirection: "row",
     justifyContent: "space-around",
   },

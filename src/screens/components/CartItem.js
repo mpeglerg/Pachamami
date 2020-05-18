@@ -2,6 +2,16 @@ import React, { useState } from "react";
 import { Text, View, Button, StyleSheet } from "react-native";
 
 const CartItem = ({ navigation }) => {
+  let productName = navigation.getParam(
+    "productName",
+    "Error getting product name"
+  );
+
+  let productPrice = navigation.getParam(
+    "productPrice",
+    "Error getting product price"
+  );
+
   const [itemQuantity, setItemQuantity] = useState(1);
   function incrementQuantity() {
     setItemQuantity(itemQuantity + 1);
@@ -24,8 +34,8 @@ const CartItem = ({ navigation }) => {
           },
         ]}
       />
-      <Text>Product Name</Text>
-      <Text>$0.00</Text>
+      <Text> {JSON.stringify(productName)}</Text>
+      <Text>{JSON.stringify(productPrice)}</Text>
       <Text>Quantity: {itemQuantity}</Text>
       <Button title="Remove from Cart"></Button>
       <Button title="+" onPress={incrementQuantity}></Button>
