@@ -1,7 +1,11 @@
 import React from "react";
 import { Text, View, StyleSheet } from "react-native";
 import { FlatGrid } from "react-native-super-grid";
-import { TouchableHighlight } from "react-native-gesture-handler";
+import {
+  TouchableHighlight,
+  TouchableOpacity,
+} from "react-native-gesture-handler";
+import { SearchBar } from "react-native-elements";
 
 const CategoryScreen = ({ navigation }) => {
   const items = [
@@ -29,7 +33,19 @@ const CategoryScreen = ({ navigation }) => {
   return (
     <View
       title
-      style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
+    >
+      <SearchBar
+        round
+        searchIcon={{ size: 20 }}
+        // onChangeText={text => this.SearchFilterFunction(text)}
+        // onClear={text => this.SearchFilterFunction('')}
+        placeholder="Type Here..."
+        // value={this.state.search}
+        platform="ios"
+        // platform="default"
+        // lightTheme
+      />
       <Text>
         {JSON.stringify(
           navigation.getParam("categoryName", "Shop All Products")
@@ -47,9 +63,11 @@ const CategoryScreen = ({ navigation }) => {
                 productName: item.productName,
                 productColor: item.code,
               })
-            }>
+            }
+          >
             <View
-              style={[styles.itemContainer, { backgroundColor: item.code }]}>
+              style={[styles.itemContainer, { backgroundColor: item.code }]}
+            >
               <Text style={styles.itemName}>{item.productName}</Text>
               <Text style={styles.itemCode}>{item.code}</Text>
             </View>
