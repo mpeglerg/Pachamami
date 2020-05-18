@@ -1,7 +1,7 @@
 import React from "react";
-import { StyleSheet, View, Text, Button } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { FlatGrid } from "react-native-super-grid";
-import { TouchableHighlight, FlatList } from "react-native-gesture-handler";
+import { TouchableHighlight } from "react-native-gesture-handler";
 
 const CategoryHomeScreen = ({ navigation }) => {
   const items = [
@@ -38,7 +38,6 @@ const styles = StyleSheet.create({
   gridView: {
     marginTop: 20,
     flex: 1,
-    // height: 50,
   },
   itemContainer: {
     justifyContent: "flex-end",

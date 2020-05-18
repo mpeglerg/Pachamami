@@ -36,14 +36,7 @@ const ContactUsScreen = ({ navigation }) => {
           items={items}
           style={styles.gridView}
           renderItem={({ item, index }) => (
-            <TouchableHighlight
-            //   onPress={() =>
-            //     navigation.navigate("Product", {
-            //       productName: item.productName,
-            //       productColor: item.code,
-            //     })
-            //   }
-            >
+            <TouchableHighlight>
               <View
                 style={[styles.itemContainer, { backgroundColor: item.code }]}>
                 <Text style={styles.itemName}>{item.productName}</Text>
