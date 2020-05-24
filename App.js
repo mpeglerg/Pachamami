@@ -13,6 +13,8 @@ import ProductScreen from "./src/screens/ProductScreen";
 import MyCartScreen from "./src/screens/MyCartScreen";
 import MuseScreen from "./src/screens/MuseScreen";
 import ModelSpotlightScreen from "./src/screens/ModelSpotlightScreen";
+import { REACT_APP_CLIENT_ID } from "react-native-dotenv";
+
 const HomeStack = createStackNavigator({
   Home: { screen: HomeScreen },
   Product: { screen: ProductScreen },

@@ -6,7 +6,7 @@ import { FontAwesome } from "@expo/vector-icons";
 import { ScrollView } from "react-native-gesture-handler";
 import ProductDescriptionCard from "./components/ProductDescriptionCard";
 
-import SlidingUpPanel from "rn-sliding-up-panel";
+// import SlidingUpPanel from "rn-sliding-up-panel";
 
 const ProductScreen = ({ navigation }) => {
   // console.log("Navigation from product screen: ", navigation);
@@ -56,8 +56,7 @@ const ProductScreen = ({ navigation }) => {
                 // productTags: item.productTags,
               })
             }
-            title="Add to Cart"
-          ></Button>
+            title="Add to Cart"></Button>
         </TouchableHighlight>
         <TouchableHighlight
           style={styles.descrip}

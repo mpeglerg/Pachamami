@@ -1,14 +1,13 @@
 import React from "react";
 import { Text, View, StyleSheet, Button } from "react-native";
-import Carousel from "react-native-carousel-view";
+// import Carousel from "react-native-carousel-view";
 
 const ProductCarousel = ({ navigation }) => {
   return (
     <View
       title
-      style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
-    >
-      <Carousel width={375} height={450} delay={2000} hideIndicators={true}>
+      style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      {/* <Carousel width={375} height={450} delay={2000} hideIndicators={true}>
         <View
           title
           style={[
@@ -28,7 +27,7 @@ const ProductCarousel = ({ navigation }) => {
           ]}
         />
         {/* <Button title="Add to Wishlist" /> */}
-      </Carousel>
+      {/* </Carousel> */}
     </View>
   );
 };
